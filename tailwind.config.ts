@@ -27,6 +27,7 @@ export default {
         primary: {
           DEFAULT: "#000000",
           hover: "#1a1a1a",
+          foreground: "#ffffff",
         },
         card: {
           DEFAULT: "white",
