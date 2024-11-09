@@ -11,13 +11,6 @@ const CategoryFilter = ({ selectedCategory, onSelectCategory }: CategoryFilterPr
   return (
     <div className="space-y-2">
       <h2 className="text-xl font-semibold mb-4">Categories</h2>
-      <Button
-        variant={selectedCategory === null ? "default" : "ghost"}
-        className="w-full justify-start"
-        onClick={() => onSelectCategory(null)}
-      >
-        All Tools
-      </Button>
       {categories.map((category) => {
         const Icon = category.icon;
         return (
