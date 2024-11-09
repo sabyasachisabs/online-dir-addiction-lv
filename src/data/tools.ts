@@ -17,7 +17,6 @@ export type Tool = {
 };
 
 export const categories = [
-  { name: "Customer Service & Support", icon: Headset },
   { name: "Sales", icon: Percent },
   { name: "Back Office", icon: Box },
   { name: "Operations", icon: Calculator },
