@@ -9,7 +9,7 @@ interface CategoryFilterProps {
 
 const CategoryFilter = ({ selectedCategory, onSelectCategory }: CategoryFilterProps) => {
   return (
-    <div className="space-y-2">
+    <div className="sticky top-4 space-y-2">
       <h2 className="text-xl font-semibold mb-4">Categories</h2>
       {categories.map((category) => {
         const Icon = category.icon;
