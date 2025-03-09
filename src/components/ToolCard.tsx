@@ -1,13 +1,14 @@
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star, Bookmark } from "lucide-react";
-import type { Tool } from "@/data/tools";
+import type { Clinic } from "@/data/tools";
 
-interface ToolCardProps {
-  tool: Tool;
+interface ClinicCardProps {
+  tool: Clinic;
 }
 
-const ToolCard = ({ tool }: ToolCardProps) => {
+const ToolCard = ({ tool }: ClinicCardProps) => {
   return (
     <Card className="p-6 hover:shadow-lg transition-all duration-300 hover:animate-card-hover">
       <div className="flex justify-between items-start">
@@ -57,7 +58,7 @@ const ToolCard = ({ tool }: ToolCardProps) => {
           className="flex-1"
           onClick={() => window.open(tool.visitUrl, "_blank")}
         >
-          Visit
+          Visit Website
         </Button>
         {tool.dealUrl && (
           <Button
@@ -65,7 +66,7 @@ const ToolCard = ({ tool }: ToolCardProps) => {
             className="flex-1"
             onClick={() => window.open(tool.dealUrl, "_blank")}
           >
-            Get Deal
+            Get Help Now
           </Button>
         )}
       </div>
