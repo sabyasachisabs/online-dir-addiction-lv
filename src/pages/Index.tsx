@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -30,6 +29,22 @@ const Index = () => {
     console.log("Searching for treatment centers with zipcode:", zipCode);
     // This would be connected to a backend search in a real application
   };
+
+  // Dutch provinces
+  const dutchProvinces = [
+    'Noord-Holland', 
+    'Zuid-Holland', 
+    'Utrecht', 
+    'Flevoland', 
+    'Gelderland', 
+    'Overijssel', 
+    'Drenthe', 
+    'Groningen', 
+    'Friesland', 
+    'Noord-Brabant', 
+    'Limburg', 
+    'Zeeland'
+  ];
 
   return (
     <div className="w-full">
@@ -77,13 +92,13 @@ const Index = () => {
       {/* Addiction Treatment Centers Section */}
       <section className="py-16 bg-blue-700 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Addiction Treatment Centers</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Addiction Treatment Centers in the Netherlands</h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'].map((state) => (
-              <div key={state} className="flex items-center justify-center">
+            {dutchProvinces.map((province) => (
+              <div key={province} className="flex items-center justify-center">
                 <MapPin className="h-4 w-4 mr-2" />
-                <a href="#" className="hover:underline">{state}</a>
+                <a href="#" className="hover:underline">{province}</a>
               </div>
             ))}
           </div>
@@ -132,7 +147,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer Help Section - Repeat of top CTA */}
+      {/* Footer Help Section */}
       <section className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
